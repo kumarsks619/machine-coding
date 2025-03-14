@@ -1,0 +1,24 @@
+.root {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	align-items: center;
+}
+.search-wrapper {
+	width: fit-content;
+}
+input {
+	width: 400px;
+	padding: 10px;
+}
+#results-dropdown {
+	display: none;
+	flex-direction: column;
+	gap: 6px;
+	border: 1px solid grey;
+	max-height: 400px;
+	overflow: auto;
+	padding: 10px;
+}
