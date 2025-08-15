@@ -1,0 +1,36 @@
+* {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.App {
+	padding: 50px;
+}
+.fileExplorerItem__root {
+	padding-left: 20px;
+	margin: 8px 0px;
+}
+.fileExplorerItem__nameWrapper {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	width: fit-content;
+}
+.fileExplorerItem__nameWrapper p {
+	cursor: pointer;
+	padding: 1px;
+	border: 2px solid transparent;
+}
+.fileExplorerItem__nameWrapper p.selected {
+	border-color: gray;
+}
+.actionButtons__root {
+	display: flex;
+	align-items: center;
+}
+.actionButtons__root button {
+	cursor: pointer;
+}
+.actionButtons__root button img {
+	width: 20px;
+}
