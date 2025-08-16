@@ -33,8 +33,6 @@ function App() {
 			return areAllChildrenChecked
 		}
 		CHECKBOXES_DATA.forEach((checkbox) => checkAndUpdateParent(checkbox))
-
-		console.log(checkBoxIdsCopy)
 		setCheckedBoxIds(checkBoxIdsCopy)
 	}
 
