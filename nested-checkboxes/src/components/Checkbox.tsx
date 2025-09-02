@@ -10,10 +10,10 @@ const Checkbox = ({
 	handleCheckboxClick,
 }: {
 	checkbox: CheckboxType
-	checkedBoxIds: Set<number>
+	checkedBoxIds: { [checkboxId: number]: boolean }
 	handleCheckboxClick: (checkbox: CheckboxType, isChecked: boolean) => void
 }) => {
-	const isChecked = checkedBoxIds.has(checkbox.id)
+	const isChecked = checkedBoxIds[checkbox.id] ?? false
 	return (
 		<div style={{ marginLeft: '20px' }}>
 			<div style={{ display: 'flex', alignItems: 'center', gap: '4px', marginBottom: '4px' }}>
@@ -22,7 +22,9 @@ const Checkbox = ({
 					id={`${checkbox.label}-${checkbox.id}`}
 					style={{ cursor: 'pointer' }}
 					checked={isChecked}
-					onChange={($event) => handleCheckboxClick(checkbox, ($event.target as HTMLInputElement).checked)}
+					onChange={($event) =>
+						handleCheckboxClick(checkbox, ($event.target as HTMLInputElement).checked)
+					}
 				/>
 				<label
 					htmlFor={`${checkbox.label}-${checkbox.id}`}
