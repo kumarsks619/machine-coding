@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Query Editor</title>
+		<link
+			rel="stylesheet"
+			href="./style.css" />
+	</head>
+	<body>
+		<div>
+			<label for="queryInput">Enter Query:</label><br />
+			<input
+				type="text"
+				id="queryInput"
+				style="width: 600px"
+				placeholder='e.g., url = "localhost" AND env IN ["prod", "alpha"]' />
+			<p>Hit 'ENTER' to see the parsed query state.</p>
+		</div>
+		<div>
+			<h3>Parsed Query State:</h3>
+			<pre id="queryOutput"></pre>
+		</div>
+
+		<script
+			type="text/javascript"
+			src="./script.js" />
+	</body>
+</html>

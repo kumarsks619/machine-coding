@@ -1,0 +1,100 @@
+body {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+	margin: 0;
+	padding: 20px;
+	background-color: #f5f5f5;
+}
+
+#app {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+#app h1 {
+	color: #333;
+	margin-bottom: 10px;
+}
+
+#app p {
+	color: #666;
+	margin-bottom: 30px;
+}
+
+#root {
+	background: white;
+	border-radius: 8px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+}
+
+.options-wrapper {
+	display: flex;
+	gap: 20px;
+	padding: 15px;
+	background-color: #f8f9fa;
+	border-bottom: 1px solid #e9ecef;
+}
+
+.block-buttons,
+.format-buttons {
+	display: flex;
+	gap: 8px;
+}
+
+.options-wrapper button {
+	padding: 8px 12px;
+	border: 1px solid #ddd;
+	background: white;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 500;
+	transition: all 0.2s;
+}
+
+.options-wrapper button:hover {
+	background-color: #e9ecef;
+	border-color: #adb5bd;
+}
+
+.options-wrapper button.active {
+	background-color: #007bff;
+	color: white;
+	border-color: #007bff;
+}
+
+.editor-content {
+	min-height: 300px;
+	padding: 20px;
+	outline: none;
+}
+
+.editor-content h1 {
+	font-size: 2em;
+	font-weight: bold;
+	margin: 0 0 16px 0;
+	line-height: 1.2;
+}
+
+.editor-content h2 {
+	font-size: 1.5em;
+	font-weight: bold;
+	margin: 0 0 14px 0;
+	line-height: 1.3;
+}
+
+.editor-content p {
+	font-size: 1em;
+	margin: 0 0 12px 0;
+	line-height: 1.5;
+}
+
+.editor-content [data-node-id]:focus {
+	outline: none;
+}
+
+.editor-content [data-node-id]:empty:before {
+	content: attr(data-placeholder);
+	color: #aaa;
+	font-style: italic;
+}
